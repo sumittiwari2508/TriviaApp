@@ -9,6 +9,8 @@ import UIKit
 
 class FlagColorsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var checkbox: UIImageView!
+    @IBOutlet weak var flagColor: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

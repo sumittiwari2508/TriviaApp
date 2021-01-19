@@ -9,6 +9,8 @@ import UIKit
 
 class CricketerNameTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var checkbox: UIImageView!
+    @IBOutlet weak var cricketerName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

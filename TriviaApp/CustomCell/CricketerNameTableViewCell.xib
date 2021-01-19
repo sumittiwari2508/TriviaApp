@@ -1,21 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CricketerNameTableViewCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cricketer" id="KGk-i7-Jjw" customClass="CricketerNameTableViewCell" customModule="TriviaApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z81-qC-rBR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Deselect" translatesAutoresizingMaskIntoConstraints="NO" id="xDr-te-9e7">
+                                <rect key="frame" x="8" y="10" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="e2P-Sr-I9v"/>
+                                    <constraint firstAttribute="width" constant="24" id="ee0-Ha-s6T"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDp-R1-6xS">
+                                <rect key="frame" x="37" y="5" width="263" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fDp-R1-6xS" firstAttribute="leading" secondItem="xDr-te-9e7" secondAttribute="trailing" constant="5" id="2wx-OO-0eD"/>
+                            <constraint firstItem="xDr-te-9e7" firstAttribute="leading" secondItem="z81-qC-rBR" secondAttribute="leading" constant="8" id="7I7-oP-Nkn"/>
+                            <constraint firstAttribute="bottom" secondItem="fDp-R1-6xS" secondAttribute="bottom" constant="5" id="GKD-hf-E1D"/>
+                            <constraint firstItem="xDr-te-9e7" firstAttribute="centerY" secondItem="z81-qC-rBR" secondAttribute="centerY" id="MNk-l5-lAb"/>
+                            <constraint firstItem="fDp-R1-6xS" firstAttribute="top" secondItem="z81-qC-rBR" secondAttribute="top" constant="5" id="iRK-u3-Spr"/>
+                            <constraint firstAttribute="trailing" secondItem="fDp-R1-6xS" secondAttribute="trailing" constant="20" id="iTd-IH-NZu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="z81-qC-rBR" secondAttribute="trailing" id="0Rp-BT-dZW"/>
+                    <constraint firstItem="z81-qC-rBR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RDs-g8-4zd"/>
+                    <constraint firstItem="z81-qC-rBR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wpJ-XU-E7U"/>
+                    <constraint firstAttribute="bottom" secondItem="z81-qC-rBR" secondAttribute="bottom" id="yDh-Bc-8hJ"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="checkbox" destination="xDr-te-9e7" id="if4-ns-kYi"/>
+                <outlet property="cricketerName" destination="fDp-R1-6xS" id="en4-o2-Pbu"/>
+            </connections>
+            <point key="canvasLocation" x="136" y="131"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Deselect" width="12.5" height="12.5"/>
+    </resources>
 </document>

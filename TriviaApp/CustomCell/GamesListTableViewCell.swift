@@ -9,6 +9,10 @@ import UIKit
 
 class GamesListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateTime: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var bestcricketerName: UILabel!
+    @IBOutlet weak var flagColors: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
